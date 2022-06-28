@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>View</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create' %}">Start Audit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'data' %}">Audit Records</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="tab-content">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div id="step" class="tab-pane" role="tabpanel">
+
+
+                <h1>ISAGO audit checklist questions</h1>
+                <table class="table table-bordered border-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sub Clause</th>
+                            <th scope="col">Requirement</th>
+                            <th scope="col">Yes</th>
+                            <th scope="col">No</th>
+                            <th scope="col">Comments</th>
+                            <th scope="col">Attach Documents(if necessary)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {%for checklist in checklists%}
+                            <th scope="row">{{checklist.CLAUSE}}</th>
+                            <td>{{checklist.REQUIREMENT}}</td>
+                            <td><input type="checkbox" id="html" name="one_point_one_point_one_yes" value="yes"></td>
+                            <td><input type="checkbox" id="css" name="one_point_one_point_one_no" value="no"></td>
+                            <td><textarea rows="8" cols="30" name="one_point_one_point_one_comments"></textarea></td>
+                            <td><input type="file" name="myfile" name="one_point_one_point_one_attach_documents" multiple></td>
+                            {%endfor%}
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </form>
+    </div>
+
+    <a class="btn btn-primary" href="{% url 'dataa' %}" role="button">Back</a>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

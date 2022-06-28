@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="text-center">REPORT</h1>
+    <!-- {%for emp in emps%}
+    <p>Audit details - {{emp.emp_type_of_audit}}/{{emp.emp_being_audited}}/{{emp.emp_auditors}}/{{emp.emp_date_of_audit}}/{{emp.emp_end_date_of_audit}}/{{emp.emp_department_being_audited}}/{{emp.emp_person_being_audited}}</p>
+    {%endfor%}
+    {{total_nonconformities}}
+    {{auditstandard.CODE.CLAUSE}}
+
+    {%for detail in checklist_details%} {{detail.CODE.emp_unique_identifier.emp_department_being_audited}} {%endfor%}
+    
+    <p>Total Number of Conformities - {{total_conformities}}</p>
+    <p>Total Number of Non Conformities - {{total_nonconformities}}</p> -->
+    <!-- <hr> {%for emp in emps%}
+    <h1>Audit Information</h1>
+    <p>Type of Audit - {{emp.emp_type_of_audit}}</p>
+    <p>Company being Audited - {{emp.emp_being_audited}}</p>
+    <p>Auditors - {{emp.emp_auditors}}</p>
+    <p>Start Date of Audit - {{emp.emp_date_of_audit}}</p>
+    <p>End Date of Audit - {{emp.emp_end_date_of_audit}}</p>
+    <p> Department under Company being Audited - {{emp.emp_department_being_audited}}</p>
+    <p>Person being Audited - {{emp.emp_person_being_audited}}</p>
+    {%endfor%}
+    <p>Audit - {{auditstandard.CODE}}</p>
+    <hr> -->
+    <h3><u>AUDIT DETAILS</u></h3>
+    <p>Type of Audit - {{emp1.emp_type_of_audit}}</p>
+    <p>Company being Audited - {{emp1.emp_being_audited}}</p>
+    <p>Auditors - {{emp1.emp_auditors}}</p>
+    <p>Start Date - {{emp1.emp_date_of_audit}}</p>
+    <p>End Date of Audit - {{emp1.emp_end_date_of_audit}}</p>
+    <p>Department Being Audited - {{emp1.emp_department_being_audited}}</p>
+    <p>Person Being Audited - {{emp1.emp_person_being_audited}}</p>
+    <p>Unique Identifier - {{emp1.emp_unique_identifier}}</p>
+    <hr>
+    <h3><u>AUDIT FINDINGS</u></h3>
+    <p>Total Number of Conformities - {{total_conformities}}</p>
+    <p>Total Number of Non-Conformities - {{total_nonconformities}}</p>
+    <!-- <hr>{%for detail in checklist_details%}
+    <p>Type of Audit - {{detail.UNIQUE_IDENTIFIER.emp_type_of_audit}}</p>
+    <p>Company Being Audited - {{detail.UNIQUE_IDENTIFIER.emp_being_audited}}</p>
+    <p>Auditors - {{detail.UNIQUE_IDENTIFIER.emp_auditors}}</p>
+    <p>Start Date - {{detail.UNIQUE_IDENTIFIER.emp_date_of_audit}}</p>
+    <p>End Date of Audit - {{detail.UNIQUE_IDENTIFIER.emp_end_date_of_audit}}</p>
+    <p>Department Being Audited - {{detail.UNIQUE_IDENTIFIER.emp_department_being_audited}}</p>
+    <p>Person Being Audited - {{detail.UNIQUE_IDENTIFIER.emp_person_being_audited}}</p>
+    <p>Unique Identifier - {{detail.UNIQUE_IDENTIFIER.emp_unique_identifier}}</p>
+    {%endfor%} 
+    <p>Audit - {{auditstandard.CODE}}</p>
+    <p>{{audit_details.UNIQUE_IDENTIFIER.emp_type_of_audit}}</p>
+-->
+    <!-- {% for object in nonconformity_objects %}
+    <td>{{ object.CLAUSE }}</td>
+    {%endfor%} -->
+    <hr>
+    <h3><u>Assigning Non-Conformity</u></h3>
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Clause of Non-Conformity</th>
+                <th scope="col">Person Being Assigned</th>
+
+            </tr>
+        </thead>
+        {% for object in nonconformity_objects %}
+        <tbody>
+            <tr>
+                <td>{{ object.CLAUSE }}</td>
+                <td>{{emp1.emp_person_being_audited}}</td>
+
+                <!-- <td>{{ object.CLAUSE }}</td>
+                <td>{{emp1.emp_person_being_audited}}</td> -->
+            </tr>
+        </tbody>
+        {%endfor%}
+    </table>
+
+    <!-- {% for object in nonconformity_objects %}
+
+        <tbody>
+            <tr>
+                <td>{{ object.CLAUSE }}</td>
+                <td>{{emp1.emp_person_being_audited}}</td>
+            </tr>
+
+        </tbody>
+        {%endfor%} -->
+
+    <!-- <thead>
+            <tr>
+                <th>ASDFG</th>
+                <th>Clause of Non-Conformity</th>
+                <th>Person Being Assigned</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12345</td>
+                <td>{{ object.CLAUSE }}</td>
+                <td>{{emp1.emp_person_being_audited}}</td>
+            </tr>
+        </tbody> -->
+    <!-- </table>
+
+
+
+
+
+    <hr>
+    <h1>Assigning Non-Conformity to Somebody</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Clause of Non-Conformity</th>
+                <th>Person Being Assigned</th>
+
+            </tr>
+        </thead>
+        {% for object in nonconformity_objects %} {{object}}
+        <tbody>
+
+            <tr>
+
+                <td>{{ object.CLAUSE }}</td>
+                <td>{{emp1.emp_person_being_audited}}</td>
+            </tr>
+        </tbody>
+        {%endfor%}
+    </table>
+ -->
+    <!-- <tbody>
+        {% for titles in title %}
+        <tr>
+            <td>{{ titles.CODE }}</td>
+            <td><a href="{% url 'updateaudit' titles.id %}">Edit</a></td>
+            <td><a href="{% url 'vieww' titles.id %}">Proceed</a></td>
+
+        </tr>
+
+        {% endfor %}
+    </tbody>
+ -->
+
+    <!-- <button><a href="{% url 'pdf' emp1.id %}">pdf</a></button> -->
+    <a class="btn btn-secondary" href="{% url 'pdf' emp1.id %}" role="button">Download PDF of Report</a>
+    <a class="btn btn-secondary" href="{% url 'emaill' %}" role="button">Email Report</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="smartwizard">
+        <ul class="nav">
+            <li>
+                <a class="nav-link" href="#step-1">
+                  Step 1
+               </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#step-2">
+                  Step 2
+               </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#step-3">
+                  Step 3
+               </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#step-4">
+                  Step 4
+               </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#step-5">
+                  Step 5
+               </a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div id="step-1" class="tab-pane" role="tabpanel">
+
+
+                    <h1>ISO 9001-2015 audit checklist questions</h1>
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sub Clause</th>
+                                <th scope="col">Requirement</th>
+                                <th scope="col">Conformity</th>
+                                <th scope="col">Non-Conformity</th>
+                                <th scope="col">Comments</th>
+                                <th scope="col">Risk Level</th>
+                                <th scope="col">Attach Documents(if necessary)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">4.1</th>
+                                <td>"The organization shall determine external and internal issues that are relevant to its purpose and its strategic direction and that affect its ability to achieve the intended result(s) of its quality management system.
+                                    The organization shall monitor and review information about these external and internal issues. NOTE 1 Issues can include positive and negative factors or conditions for consideration. NOTE 2 Understanding the external
+                                    context can be facilitated by considering issues arising from legal, technological, competitive, market, cultural, social and economic environments, whether international, national, regional or local. NOTE 3 Understanding
+                                    the internal context can be facilitated by considering issues related to values, culture, knowledge and performance of the organization."</td>
+                                <td><input type="checkbox" id="html" name="four_point_one_yes" value="True"></td>
+                                <td><input type="checkbox" id="css" name="four_point_one_no" value="False"></td>
+                                <td><textarea rows="8" cols="30" name="four_point_one_comments"></textarea></td>
+                                <td><select name="four_point_one_risk_level" class="form-select" aria-label="Default select example">
+                                    <option >----</option>
+                                    <option value="High Risk">High Risk</option>
+                                    <option value="Medium Risk">Medium Risk</option>
+                                    <option value="Low Risk">Low Risk</option>
+                                  </select></td>
+                                <td><input type="file" id="four_point_one_attach_documents" name="four_point_one_attach_documents"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div id="step-2" class="tab-pane" role="tabpanel">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sub Clause</th>
+                                <th scope="col">Requirement</th>
+                                <th scope="col">Conformity</th>
+                                <th scope="col">Non-Conformity</th>
+                                <th scope="col">Comments</th>
+                                <th scope="col">Risk Level</th>
+                                <th scope="col">Attach Documents(if necessary)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">4.2</th>
+                                <td>"Due to their effect or potential effect on the organization’s ability to consistently provide products and services that meet customer and applicable statutory and regulatory requirements, the organization shall determine:
+                                    a) the interested parties that are relevant to the quality management system; b) the requirements of these interested parties that are relevant to the quality management system. The organization shall monitor and review
+                                    information about these interested parties and their relevant requirements."</td>
+                                <td><input type="checkbox" id="rice" name="four_point_two_yes" value="True"></td>
+                                <td><input type="checkbox" id="beans" name="four_point_two_no" value="False"></td>
+                                <td><textarea rows="8 " cols="30" name="four_point_two_comments"></textarea></td>
+                                <td><select name="four_point_two_risk_level" class="form-select" aria-label="Default select example">
+                                    <option >----</option>
+                                    <option value="High Risk">High Risk</option>
+                                    <option value="Medium Risk">Medium Risk</option>
+                                    <option value="Low Risk">Low Risk</option>
+                                  </select></td>
+                                <td><input type="file" id="four_point_two_attach_documents" name="four_point_two_attach_documents"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <div id="step-3" class="tab-pane" role="tabpanel">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sub Clause</th>
+                                <th scope="col">Requirement</th>
+                                <th scope="col">True</th>
+                                <th scope="col">Conformity</th>
+                                <th scope="col">Non-Conformity</th>
+                                <th scope="col">Risk Level</th>
+                                <th scope="col">Attach Documents(if necessary)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">4.3</th>
+                                <td>"The organization shall determine the boundaries and applicability of the quality management system to establish its scope. When determining this scope, the organization shall consider: <br> a) the external and internal
+                                    issues referred to in 4.1;
+                                    <br> b) the requirements of relevant interested parties referred to in 4.2;
+                                    <br> c) the products and services of the organization.
+                                    <br> The organization shall apply all the requirements of this International Standard if they are applicable within the determined scope of its quality management system. The scope of the organization’s quality management
+                                    system shall be available and be maintained as documented information. The scope shall state the types of products and services covered, and provide justification for any requirement of this International Standard that
+                                    the organization determines is not applicable to the scope of its quality management system. Conformity to this International Standard may only be claimed if the requirements determined as not being applicable do not
+                                    affect the organization’s ability or responsibility to ensure the conformity of its products and services and the enhancement of customer satisfaction."</td>
+                                <td><input type="checkbox" id="up" name="four_point_three_yes" value="True"></td>
+                                <td><input type="checkbox" id="down" name="four_point_three_no" value="False"></td>
+                                <td><textarea rows="8 " cols="30" name="four_point_three_comments"></textarea></td>
+                                <td><select name="four_point_three_risk_level" class="form-select" aria-label="Default select example">
+                                    <option >----</option>
+                                    <option value="High Risk">High Risk</option>
+                                    <option value="Medium Risk">Medium Risk</option>
+                                    <option value="Low Risk">Low Risk</option>
+                                  </select></td>
+                                <td><input type="file" id="four_point_three_attach_documents" name="four_point_three_attach_documents"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="step-4" class="tab-pane" role="tabpanel">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sub Clause</th>
+                                <th scope="col">Requirement</th>
+                                <th scope="col">Conformity</th>
+                                <th scope="col">Non-Conformity</th>
+                                <th scope="col">Comments</th>
+                                <th scope="col">Risk Level</th>
+                                <th scope="col">Attach Documents(if necessary)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">4.4.1</th>
+                                <td>"The organization shall establish, implement, maintain and continually improve a quality management system, including the processes needed and their interactions, in accordance with the requirements of this International
+                                    Standard. The organization shall determine the processes needed for the quality management system and their application throughout the organization, and shall: <br> a) determine the inputs required and the outputs expected
+                                    from these processes;
+                                    <br> b) determine the sequence and interaction of these processes;
+                                    <br> c) determine and apply the criteria and methods (including monitoring, measurements and related performance indicators) needed to ensure the effective operation and control of these processes;
+                                    <br> d) determine the resources needed for these processes and ensure their availability;
+                                    <br> e) assign the responsibilities and authorities for these processes;
+                                    <br> f) address the risks and opportunities as determined in accordance with the requirements of 6.1;
+                                    <br> g) evaluate these processes and implement any changes needed to ensure that these processes achieve their intended results;
+                                    <br> h) improve the processes and the quality management system."</td>
+                                <td><input type="checkbox" id="right" name="four_point_four_point_one_yes" value="True"></td>
+                                <td><input type="checkbox" id="left" name="four_point_four_point_one_no" value="False"></td>
+                                <td><textarea rows="8" cols="30" name="four_point_four_point_one_comments"></textarea></td>
+                                <td><select name="four_point_four_point_one_risk_level" class="form-select" aria-label="Default select example">
+                                    <option >----</option>
+                                    <option value="High Risk">High Risk</option>
+                                    <option value="Medium Risk">Medium Risk</option>
+                                    <option value="Low Risk">Low Risk</option>
+                                  </select></td>
+                                <td><input type="file" id="four_point_four_point_one_attach_documents" name="four_point_four_point_one_attach_documents"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div id="step-5" class="tab-pane" role="tabpanel">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sub Clause</th>
+                                <th scope="col">Requirement</th>
+                                <th scope="col">Conformity</th>
+                                <th scope="col">Non-Conformity</th>
+                                <th scope="col">Comments</th>
+                                <th scope="col">Risk Level</th>
+                                <th scope="col">Attach Documents(if necessary)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">4.4.2</th>
+                                <td>"To the extent necessary, the organization shall:
+                                    <br> a) maintain documented information to support the operation of its processes;
+                                    <br> b) retain documented information to have confidence that the processes are being carried out as planned."</td>
+                                <td><input type="checkbox" id="walk" name="four_point_four_point_two_yes" value="True"></td>
+                                <td><input type="checkbox" id="run" name="four_point_four_point_two_no" value="False"></td>
+                                <td><textarea rows="8" cols="30" name="four_point_four_point_two_comments"></textarea></td>
+                                <td><select name="four_point_four_point_two_risk_level" class="form-select" aria-label="Default select example">
+                                    <option >----</option>
+                                    <option value="High Risk">High Risk</option>
+                                    <option value="Medium Risk">Medium Risk</option>
+                                    <option value="Low Risk">Low Risk</option>
+                                  </select></td>
+                                <td><input type="file" id="four_point_four_point_two_attach_documents" name="four_point_four_point_two_attach_documents"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="submit" class="btn btn-primary ">Submit</button>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+
+            // SmartWizard initialize
+            $('#smartwizard').smartWizard();
+
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/TruevpZ13" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

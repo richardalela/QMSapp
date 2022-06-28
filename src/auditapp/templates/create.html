@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>Create View</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'data' %}">Audit Records</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Audit</h2>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <div class="alert alert-primary" role="alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form method="POST" action={% url "store" %}>
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleInputPassword1">Unique Identifier</label>
+                <input type="text" class="form-control" id="emp_name" name="emp_unique_identifier" placeholder="Enter Unique Identifier" required>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Start Date of Audit</label>
+                    <input type="date" class="form-control" id="emp_mobile" name="emp_date_of_audit" placeholder="Enter Date of Audit" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">End Date of Audit</label>
+                    <input type="date" class="form-control" id="emp_mobile" name="emp_end_date_of_audit" placeholder="Enter Date of Audit" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Type of Audit</label>
+                    <select type="text" class="form-control" id="emp_name" name="emp_type_of_audit" placeholder="Enter type of Audit" required>
+                    <option></option>
+                    <option value="First Party Audit">First Party Audit</option>
+                    <option value="Second Party Audit">Second Party Audit</option>
+                    <option value="Third Party Audit">Third Party Audit</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Company being Audited</label>
+                    <input type="text " class="form-control" id="emp_name" name="emp_being_audited" placeholder="Enter Company being Audited" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Department under the Company being Audited</label>
+                    <input type="text " class="form-control" id="emp_name" name="emp_department_being_audited" placeholder="Enter Department under the Company being Audited" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Person being Audited</label>
+                    <input type="text " class="form-control" id="emp_name" name="emp_person_being_audited" placeholder="Enter person being Audited" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Auditor(s)</label>
+                    <input type="text" class="form-control" id="emp_mobile" name="emp_auditors" placeholder="Enter Auditors" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Audit</button>
+                <a class="btn btn-primary" href="{% url 'home' %}" role="button">Back</a>
+        </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384 JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+</body>
+
+</html>

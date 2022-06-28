@@ -1,0 +1,28 @@
+body {
+    font: 12px/1.4 Verdana, Arial;
+    background: #eee;
+    height: 100%;
+    margin: 25px 0;
+    padding: 30px
+}
+
+h1 {
+    font: 24px Georgia, Verdana;
+    margin: 0
+}
+
+h2 {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 0 20px
+}
+
+p {
+    margin-top: 0
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px
+}
